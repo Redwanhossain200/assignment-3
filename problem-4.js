@@ -1,16 +1,15 @@
 function gonoVote(array) {
-
   if (!Array.isArray(array)) {
-    return "Invalid";
+    return 'Invalid';
   }
 
   let ha = 0;
   let na = 0;
 
   for (let i = 0; i < array.length; i++) {
-    if (array[i] === "ha") {
+    if (array[i] === 'ha') {
       ha++;
-    } else if (array[i] === "na") {
+    } else if (array[i] === 'na') {
       na++;
     }
   }
@@ -18,7 +17,7 @@ function gonoVote(array) {
   if (ha > na) {
     return true;
   } else if (ha === na) {
-    return "equal";
+    return 'equal';
   } else {
     return false;
   }

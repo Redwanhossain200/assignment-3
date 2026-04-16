@@ -1,15 +1,14 @@
 function analyzeText(str) {
-
-  if (typeof str !== "string") {
-    return "Invalid";
+  if (typeof str !== 'string') {
+    return 'Invalid';
   }
 
-  if (str.trim() === "") {
-    return "Invalid";
+  if (str.trim() === '') {
+    return 'Invalid';
   }
 
-  let words = str.split(" ");
-  let longestWord = "";
+  let words = str.split(' ');
+  let longestWord = '';
 
   for (let i = 0; i < words.length; i++) {
     if (words[i].length > longestWord.length) {
@@ -17,11 +16,11 @@ function analyzeText(str) {
     }
   }
 
-  let totalChars = str.split(" ").join("").length;
+  let totalChars = str.split(' ').join('').length;
 
   return {
     longwords: longestWord,
-    token: totalChars
+    token: totalChars,
   };
 }
 

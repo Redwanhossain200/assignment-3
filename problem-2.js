@@ -1,18 +1,14 @@
 function validOtp(otp) {
-
-  if (typeof otp !== "string") {
-    return "Invalid";
-  }
-  else if (otp.length !== 8) {
+  if (typeof otp !== 'string') {
+    return 'Invalid';
+  } else if (otp.length !== 8) {
     return false;
-  }
-  else if (otp.startsWith("ph-")) {
+  } else if (otp.startsWith('ph-')) {
     return true;
   } else {
     return false;
   }
 }
-
 
 // console.log(typeof validOtp("ph-10985"));
 // console.log(validOtp("ph-1234"));
